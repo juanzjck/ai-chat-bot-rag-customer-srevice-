@@ -1,0 +1,509 @@
+{
+  "date": "2026-10-10",
+  "chat_model": "claude-haiku-5-5",
+  "judge_model": "claude-sonnet-5-5",
+  "top_k": 4,
+  "min_similarity": 0.28,
+  "retrieval": {
+    "metrics": {
+      "hit_at_1": 0.667,
+      "hit_at_k": 0.967,
+      "mrr": 0.806,
+      "gate_false_reject_rate": 0.0,
+      "out_of_scope_reject_rate": 1.0,
+      "score": 94.3
+    },
+    "cases": [
+      {
+        "id": "r01",
+        "question": "Is there interest on the four-installment plan?",
+        "expected": [
+          "pay-in-4.md::How Pay in 4 works"
+        ],
+        "keys": [
+          "pay-in-4.md::How Pay in 4 works",
+          "approvals-and-limits.md::Number of open plans",
+          "pay-in-4.md::Paying off Pay in 4 early",
+          "monthly-financing.md::Paying off Monthly Financing early"
+        ],
+        "top_score": 0.5772,
+        "rank": 1
+      },
+      {
+        "id": "r02",
+        "question": "whats the minimum purchase amount to split in 4",
+        "expected": [
+          "pay-in-4.md::Eligibility for Pay in 4"
+        ],
+        "keys": [
+          "pay-in-4.md::How Pay in 4 works",
+          "pay-in-4.md::Eligibility for Pay in 4",
+          "approvals-and-limits.md::Number of open plans",
+          "pay-in-4.md::Paying off Pay in 4 early"
+        ],
+        "top_score": 0.5405,
+        "rank": 2
+      },
+      {
+        "id": "r03",
+        "question": "When exactly do you take the third installment?",
+        "expected": [
+          "pay-in-4.md::Pay in 4 payment schedule"
+        ],
+        "keys": [
+          "pay-in-4.md::Pay in 4 payment schedule",
+          "orders-and-delivery.md::Do payments start before delivery",
+          "disputes.md::Dispute deadline",
+          "rescheduling-and-hardship.md::Moving a Pay in 4 due date"
+        ],
+        "top_score": 0.3926,
+        "rank": 1
+      },
+      {
+        "id": "r04",
+        "question": "Can I pay off my Pay in 4 plan sooner than scheduled?",
+        "expected": [
+          "pay-in-4.md::Paying off Pay in 4 early"
+        ],
+        "keys": [
+          "pay-in-4.md::How Pay in 4 works",
+          "pay-in-4.md::Paying off Pay in 4 early",
+          "monthly-financing.md::Paying off Monthly Financing early",
+          "pay-in-4.md::Pay in 4 payment schedule"
+        ],
+        "top_score": 0.6493,
+        "rank": 2
+      },
+      {
+        "id": "r05",
+        "question": "I need a few more days to pay my 30 day invoice",
+        "expected": [
+          "pay-in-30.md::Extending a Pay in 30 due date"
+        ],
+        "keys": [
+          "pay-in-30.md::How Pay in 30 works",
+          "pay-in-30.md::Extending a Pay in 30 due date",
+          "orders-and-delivery.md::Do payments start before delivery",
+          "rescheduling-and-hardship.md::Moving a Monthly Financing due date"
+        ],
+        "top_score": 0.5947,
+        "rank": 2
+      },
+      {
+        "id": "r06",
+        "question": "What APR will I get on a 12 month plan?",
+        "expected": [
+          "monthly-financing.md::Interest rates (APR)"
+        ],
+        "keys": [
+          "monthly-financing.md::Interest rates (APR)",
+          "monthly-financing.md::How Monthly Financing works",
+          "monthly-financing.md::Paying off Monthly Financing early",
+          "approvals-and-limits.md::Number of open plans"
+        ],
+        "top_score": 0.6658,
+        "rank": 1
+      },
+      {
+        "id": "r07",
+        "question": "Will applying for financing hurt my credit score?",
+        "expected": [
+          "monthly-financing.md::Credit checks for Monthly Financing"
+        ],
+        "keys": [
+          "monthly-financing.md::Credit checks for Monthly Financing",
+          "monthly-financing.md::Paying off Monthly Financing early",
+          "monthly-financing.md::Interest rates (APR)",
+          "late-payments-and-fees.md::Credit reporting and collections"
+        ],
+        "top_score": 0.6161,
+        "rank": 1
+      },
+      {
+        "id": "r08",
+        "question": "can i use my credit card for the monthly installments",
+        "expected": [
+          "monthly-financing.md::Payment methods for Monthly Financing",
+          "payment-methods.md::Accepted payment methods"
+        ],
+        "keys": [
+          "monthly-financing.md::Payment methods for Monthly Financing",
+          "monthly-financing.md::Interest rates (APR)",
+          "monthly-financing.md::Paying off Monthly Financing early",
+          "monthly-financing.md::Credit checks for Monthly Financing"
+        ],
+        "top_score": 0.6512,
+        "rank": 1
+      },
+      {
+        "id": "r09",
+        "question": "how much do you charge if I miss a payment",
+        "expected": [
+          "late-payments-and-fees.md::Late fee amounts"
+        ],
+        "keys": [
+          "late-payments-and-fees.md::Late fee amounts",
+          "late-payments-and-fees.md::Grace period",
+          "late-payments-and-fees.md::Credit reporting and collections",
+          "late-payments-and-fees.md::Account restrictions after a missed payment"
+        ],
+        "top_score": 0.6451,
+        "rank": 1
+      },
+      {
+        "id": "r10",
+        "question": "How many days do I have after the due date before a penalty?",
+        "expected": [
+          "late-payments-and-fees.md::Grace period"
+        ],
+        "keys": [
+          "late-payments-and-fees.md::Grace period",
+          "rescheduling-and-hardship.md::Moving a Pay in 4 due date",
+          "late-payments-and-fees.md::Credit reporting and collections",
+          "refunds-and-returns.md::Pausing payments during a return"
+        ],
+        "top_score": 0.5037,
+        "rank": 1
+      },
+      {
+        "id": "r11",
+        "question": "my payment bounced, will you try again?",
+        "expected": [
+          "late-payments-and-fees.md::What happens if a payment fails"
+        ],
+        "keys": [
+          "late-payments-and-fees.md::What happens if a payment fails",
+          "contact-support.md::Phone numbers",
+          "refunds-and-returns.md::Pausing payments during a return",
+          "disputes.md::Dispute outcomes"
+        ],
+        "top_score": 0.4485,
+        "rank": 1
+      },
+      {
+        "id": "r12",
+        "question": "Will a missed installment show up on my credit report?",
+        "expected": [
+          "late-payments-and-fees.md::Credit reporting and collections"
+        ],
+        "keys": [
+          "late-payments-and-fees.md::Credit reporting and collections",
+          "late-payments-and-fees.md::Grace period",
+          "monthly-financing.md::Credit checks for Monthly Financing",
+          "account-and-security.md::Unauthorized purchases"
+        ],
+        "top_score": 0.6124,
+        "rank": 1
+      },
+      {
+        "id": "r13",
+        "question": "how long until I get my money back after sending an item back",
+        "expected": [
+          "refunds-and-returns.md::Refund timing"
+        ],
+        "keys": [
+          "refunds-and-returns.md::Pausing payments during a return",
+          "refunds-and-returns.md::Refund timing",
+          "disputes.md::Dispute outcomes",
+          "account-and-security.md::Unauthorized purchases"
+        ],
+        "top_score": 0.6541,
+        "rank": 2
+      },
+      {
+        "id": "r14",
+        "question": "I only returned one of the three things I bought",
+        "expected": [
+          "refunds-and-returns.md::Partial refunds"
+        ],
+        "keys": [
+          "grettings.md::hello",
+          "grettings.md::hu",
+          "grettings.md::Hi",
+          "grettings.md::Ho"
+        ],
+        "top_score": 0.3416,
+        "rank": null
+      },
+      {
+        "id": "r15",
+        "question": "The store sent me a broken product, what can I do?",
+        "expected": [
+          "disputes.md::When to open a dispute"
+        ],
+        "keys": [
+          "contact-support.md::Phone numbers",
+          "account-and-security.md::Unauthorized purchases",
+          "disputes.md::When to open a dispute",
+          "refunds-and-returns.md::How to return an item"
+        ],
+        "top_score": 0.4542,
+        "rank": 3
+      },
+      {
+        "id": "r16",
+        "question": "Is there a time limit to contest a charge?",
+        "expected": [
+          "disputes.md::Dispute deadline"
+        ],
+        "keys": [
+          "disputes.md::Dispute deadline",
+          "late-payments-and-fees.md::Grace period",
+          "disputes.md::What happens during a dispute",
+          "disputes.md::Dispute outcomes"
+        ],
+        "top_score": 0.5062,
+        "rank": 1
+      },
+      {
+        "id": "r17",
+        "question": "Do I keep paying while my case is being investigated?",
+        "expected": [
+          "disputes.md::What happens during a dispute"
+        ],
+        "keys": [
+          "disputes.md::Dispute outcomes",
+          "account-and-security.md::Unauthorized purchases",
+          "disputes.md::What happens during a dispute",
+          "disputes.md::When to open a dispute"
+        ],
+        "top_score": 0.424,
+        "rank": 3
+      },
+      {
+        "id": "r18",
+        "question": "does lumio take amex",
+        "expected": [
+          "payment-methods.md::Accepted payment methods"
+        ],
+        "keys": [
+          "payment-methods.md::Accepted payment methods",
+          "orders-and-delivery.md::Cancelling an order",
+          "one-time-card.md::Where the One-time Card cannot be used",
+          "refunds-and-returns.md::Refund timing"
+        ],
+        "top_score": 0.5133,
+        "rank": 1
+      },
+      {
+        "id": "r19",
+        "question": "I want to push back my next installment by a week",
+        "expected": [
+          "rescheduling-and-hardship.md::Moving a Pay in 4 due date"
+        ],
+        "keys": [
+          "rescheduling-and-hardship.md::Moving a Monthly Financing due date",
+          "rescheduling-and-hardship.md::Moving a Pay in 4 due date",
+          "rescheduling-and-hardship.md::Financial hardship plans",
+          "refunds-and-returns.md::Pausing payments during a return"
+        ],
+        "top_score": 0.4917,
+        "rank": 2
+      },
+      {
+        "id": "r20",
+        "question": "I lost my job and can't afford my payments",
+        "expected": [
+          "rescheduling-and-hardship.md::Financial hardship plans"
+        ],
+        "keys": [
+          "rescheduling-and-hardship.md::Financial hardship plans",
+          "rescheduling-and-hardship.md::Moving a Monthly Financing due date",
+          "late-payments-and-fees.md::Credit reporting and collections",
+          "rescheduling-and-hardship.md::Moving a Pay in 4 due date"
+        ],
+        "top_score": 0.406,
+        "rank": 1
+      },
+      {
+        "id": "r21",
+        "question": "I forgot my password",
+        "expected": [
+          "account-and-security.md::Logging in"
+        ],
+        "keys": [
+          "account-and-security.md::Logging in",
+          "contact-support.md::Phone numbers",
+          "account-and-security.md::Unauthorized purchases",
+          "account-and-security.md::Updating your phone number or email"
+        ],
+        "top_score": 0.3859,
+        "rank": 1
+      },
+      {
+        "id": "r22",
+        "question": "There's a charge on my account I don't recognize",
+        "expected": [
+          "account-and-security.md::Unauthorized purchases"
+        ],
+        "keys": [
+          "account-and-security.md::Unauthorized purchases",
+          "contact-support.md::Phone numbers",
+          "late-payments-and-fees.md::Grace period",
+          "late-payments-and-fees.md::Late fee amounts"
+        ],
+        "top_score": 0.4515,
+        "rank": 1
+      },
+      {
+        "id": "r23",
+        "question": "why was my purchase rejected at checkout",
+        "expected": [
+          "approvals-and-limits.md::Why a purchase was declined"
+        ],
+        "keys": [
+          "approvals-and-limits.md::Why a purchase was declined",
+          "account-and-security.md::Unauthorized purchases",
+          "contact-support.md::Phone numbers",
+          "disputes.md::When to open a dispute"
+        ],
+        "top_score": 0.5165,
+        "rank": 1
+      },
+      {
+        "id": "r24",
+        "question": "what's my credit limit",
+        "expected": [
+          "approvals-and-limits.md::Spending power"
+        ],
+        "keys": [
+          "pay-in-30.md::Eligibility for Pay in 30",
+          "approvals-and-limits.md::Spending power",
+          "monthly-financing.md::Interest rates (APR)",
+          "pay-in-4.md::Eligibility for Pay in 4"
+        ],
+        "top_score": 0.4209,
+        "rank": 2
+      },
+      {
+        "id": "r25",
+        "question": "How long does the virtual card last?",
+        "expected": [
+          "one-time-card.md::One-time Card validity"
+        ],
+        "keys": [
+          "one-time-card.md::One-time Card validity",
+          "contact-support.md::Support hours",
+          "late-payments-and-fees.md::Requesting a late fee waiver",
+          "one-time-card.md::What the One-time Card is"
+        ],
+        "top_score": 0.4111,
+        "rank": 1
+      },
+      {
+        "id": "r26",
+        "question": "my package never showed up",
+        "expected": [
+          "orders-and-delivery.md::Order not received"
+        ],
+        "keys": [
+          "orders-and-delivery.md::Order not received",
+          "account-and-security.md::Unauthorized purchases",
+          "contact-support.md::Phone numbers",
+          "privacy-and-data.md::Requesting a copy of your data"
+        ],
+        "top_score": 0.4047,
+        "rank": 1
+      },
+      {
+        "id": "r27",
+        "question": "how do I get all the info you have on me",
+        "expected": [
+          "privacy-and-data.md::Requesting a copy of your data"
+        ],
+        "keys": [
+          "privacy-and-data.md::Requesting a copy of your data",
+          "grettings.md::hu",
+          "grettings.md::hello",
+          "grettings.md::Ho"
+        ],
+        "top_score": 0.4481,
+        "rank": 1
+      },
+      {
+        "id": "r28",
+        "question": "are your agents open on sunday",
+        "expected": [
+          "contact-support.md::Support hours"
+        ],
+        "keys": [
+          "contact-support.md::Support hours",
+          "disputes.md::Dispute deadline",
+          "approvals-and-limits.md::Number of open plans",
+          "orders-and-delivery.md::Do payments start before delivery"
+        ],
+        "top_score": 0.3147,
+        "rank": 1
+      },
+      {
+        "id": "r29",
+        "question": "how do I file a formal complaint",
+        "expected": [
+          "contact-support.md::Making a complaint"
+        ],
+        "keys": [
+          "contact-support.md::Making a complaint",
+          "disputes.md::How to open a dispute",
+          "disputes.md::When to open a dispute",
+          "disputes.md::What happens during a dispute"
+        ],
+        "top_score": 0.5385,
+        "rank": 1
+      },
+      {
+        "id": "r30",
+        "question": "Somone called asking for my verification code, is that you?",
+        "expected": [
+          "account-and-security.md::How Lumio will contact you"
+        ],
+        "keys": [
+          "contact-support.md::Phone numbers",
+          "account-and-security.md::How Lumio will contact you",
+          "account-and-security.md::Updating your phone number or email",
+          "account-and-security.md::Unauthorized purchases"
+        ],
+        "top_score": 0.4413,
+        "rank": 2
+      }
+    ],
+    "out_of_scope": [
+      {
+        "id": "o01",
+        "question": "What's the weather in Paris today?",
+        "top_hit": "grettings.md::Ho",
+        "top_score": 0.1168
+      },
+      {
+        "id": "o02",
+        "question": "How do I bake a chocolate cake?",
+        "top_hit": "grettings.md::helo",
+        "top_score": 0.2114
+      },
+      {
+        "id": "o03",
+        "question": "Who won the football world cup in 2022?",
+        "top_hit": "grettings.md::helo",
+        "top_score": 0.0507
+      },
+      {
+        "id": "o04",
+        "question": "Write a python function that sorts a list",
+        "top_hit": "disputes.md::When to open a dispute",
+        "top_score": 0.1288
+      },
+      {
+        "id": "o05",
+        "question": "What is the capital of Australia?",
+        "top_hit": "grettings.md::Hola",
+        "top_score": 0.1259
+      },
+      {
+        "id": "o06",
+        "question": "Recommend me a good movie for tonight",
+        "top_hit": "refunds-and-returns.md::Refunds of fees and interest",
+        "top_score": 0.0874
+      }
+    ]
+  },
+  "overall_score": 94.3
+}
